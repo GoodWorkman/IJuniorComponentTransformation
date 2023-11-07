@@ -12,7 +12,7 @@ public class Sphere : MonoBehaviour
     private Vector3 _startPoint;
     private Vector3 _targetPoint;
 
-    private float distanceFault = 0.001f;
+    private float _distanceFault = 0.001f;
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class Sphere : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, _targetPoint, _speed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, _targetPoint) < distanceFault)
+        if (Vector3.Distance(transform.position, _targetPoint) < _distanceFault)
         {
             _targetPoint = _targetPoint == _endPoint.position ? _startPoint : _endPoint.position;
         }
