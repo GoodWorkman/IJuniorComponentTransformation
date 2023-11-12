@@ -471,8 +471,10 @@ GameObject:
   - component: {fileID: 1108829074}
   - component: {fileID: 1108829073}
   - component: {fileID: 1108829076}
+  - component: {fileID: 1108829077}
+  - component: {fileID: 1108829078}
   m_Layer: 0
-  m_Name: MovingCube
+  m_Name: TransformingCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,14 +575,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 1108829071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1b24613609c1e448606f758ef9970b, type: 3}
+  m_Script: {fileID: 11500000, guid: 93840542a0979a047afdb8406bd2ae95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movingSpeed: 3
-  _rotationSpeed: 40
-  _scaleSpeed: 2
+  _speed: 5
+  _moveDistance: 0
+  _isLooped: 1
+--- !u!114 &1108829077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108829071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8464c0526adc349ab7f9d9f587bbc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSpeed: 60
+--- !u!114 &1108829078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108829071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b353084e18283d4184de55cc1b9fff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pulseSpeed: 2
   _minimalScale: 1
-  _maximalScale: 2
+  _maximalScale: 3
+  _liftReductionRatio: 2
 --- !u!1 &1206691109
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +778,7 @@ GameObject:
   - component: {fileID: 1361997093}
   - component: {fileID: 1361997096}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: GrowingCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,9 +884,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b353084e18283d4184de55cc1b9fff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minimalScale: 1
-  _maximalScale: 2
   _pulseSpeed: 1
+  _minimalScale: 1
+  _maximalScale: 3
+  _liftReductionRatio: 1
 --- !u!1 &1626491291
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1007,7 @@ GameObject:
   - component: {fileID: 2129155920}
   - component: {fileID: 2129155923}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: MovingSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1081,8 +1111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93840542a0979a047afdb8406bd2ae95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _endPoint: {fileID: 474356481}
-  _speed: 8
+  _speed: 2
+  _moveDistance: 15
+  _isLooped: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
